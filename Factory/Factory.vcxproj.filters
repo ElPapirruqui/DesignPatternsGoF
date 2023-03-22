@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="EnemyFactory.h">
+    <ClInclude Include="Factory\EnemyFactory.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="IEnemy.h">
@@ -24,27 +24,27 @@
     <ClInclude Include="EnemyMelee.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyConfiguration.h">
+    <ClInclude Include="Configuration\IConfiguration.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Maker\Maker.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
-    <ClInclude Include="Client\MyEnemyConfig.h">
+    <ClInclude Include="Configuration\Custom\MyEnemyConfig.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
     <ClInclude Include="EnemyRange.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Maker\ClassNameFormatter.h">
+    <ClInclude Include="Factory\IFactory.h">
+      <Filter>Archivos de encabezado</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\GetClassName.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyFactory.cpp">
+    <ClCompile Include="Factory\EnemyFactory.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="Main.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="IEnemy.cpp">

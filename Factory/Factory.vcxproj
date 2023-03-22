@@ -126,20 +126,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="EnemyRange.h" />
-    <ClInclude Include="Client\MyEnemyConfig.h" />
-    <ClInclude Include="EnemyConfiguration.h" />
-    <ClInclude Include="EnemyFactory.h" />
+    <ClInclude Include="Configuration\Custom\MyEnemyConfig.h" />
+    <ClInclude Include="Factory\EnemyFactory.h" />
     <ClInclude Include="EnemyMelee.h" />
-    <ClInclude Include="Maker\ClassNameFormatter.h" />
-    <ClInclude Include="Maker\Maker.h" />
+    <ClInclude Include="Factory\IFactory.h" />
+    <ClInclude Include="Configuration\IConfiguration.h" />
+    <ClInclude Include="Helpers\GetClassName.h" />
     <ClInclude Include="IEnemy.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyFactory.cpp" />
+    <ClCompile Include="Factory\EnemyFactory.cpp" />
     <ClCompile Include="EnemyMelee.cpp" />
     <ClCompile Include="EnemyRange.cpp" />
     <ClCompile Include="IEnemy.cpp" />
-    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

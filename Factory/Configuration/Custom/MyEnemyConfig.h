@@ -1,9 +1,9 @@
 #pragma once
-#include "../Maker/Maker.h"
+#include "../IConfiguration.h"
 #include "EnemyMelee.h"
 #include "EnemyRange.h"
 
-class MyEnemyConfig : public Maker {
+class MyEnemyConfig : public IConfiguration {
 public:
 	MyEnemyConfig() {
 		Add<EnemyMelee>();
