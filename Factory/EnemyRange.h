@@ -4,5 +4,6 @@
 class EnemyRange : public IEnemy {
 public:
 	EnemyRange();
-	~EnemyRange();
+	~EnemyRange() override;
+	string Welcome() override;
 };

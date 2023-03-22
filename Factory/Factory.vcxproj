@@ -29,13 +29,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -127,16 +125,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EnemyRange.h" />
+    <ClInclude Include="Client\MyEnemyConfig.h" />
     <ClInclude Include="EnemyConfiguration.h" />
     <ClInclude Include="EnemyFactory.h" />
     <ClInclude Include="EnemyMelee.h" />
-    <ClInclude Include="EnemyRange.h" />
-    <ClInclude Include="EnemySupport.h" />
-    <ClInclude Include="EnemyTank.h" />
+    <ClInclude Include="Maker\ClassNameFormatter.h" />
+    <ClInclude Include="Maker\Maker.h" />
     <ClInclude Include="IEnemy.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="EnemyFactory.cpp" />
+    <ClCompile Include="EnemyMelee.cpp" />
+    <ClCompile Include="EnemyRange.cpp" />
+    <ClCompile Include="IEnemy.cpp" />
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

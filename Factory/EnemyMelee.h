@@ -4,5 +4,6 @@
 class EnemyMelee : public IEnemy {
 public:
 	EnemyMelee();
-	~EnemyMelee();
+	~EnemyMelee() override;
+	string Welcome() override;
 };
