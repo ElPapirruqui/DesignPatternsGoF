@@ -3,9 +3,9 @@
 #include "../../Enemy/Goblin/GoblinAssasin.h"
 #include "../../Enemy/Goblin/GoblinMage.h"
 
-class MyGoblinConfig : public IConfiguration {
+class EnemyGoblinConfig : public IConfiguration {
 public:
-	MyGoblinConfig() {
+	EnemyGoblinConfig() {
 		Add<GoblinAssasin>();
 		Add<GoblinMage>();
 	}

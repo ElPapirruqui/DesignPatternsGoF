@@ -1,4 +1,5 @@
 #pragma once
+#include "../Configuration/IConfiguration.h"
 #include<string>
 
 using namespace std;

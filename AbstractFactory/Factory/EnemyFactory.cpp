@@ -1,6 +1,5 @@
 #include "../Configuration/IConfiguration.h"
 #include "EnemyFactory.h"
-#include "../Enemy/IEnemy.h"
 
 EnemyFactory::EnemyFactory(IConfiguration* NewConfig) :IFactory<IEnemy>(NewConfig) {}
 

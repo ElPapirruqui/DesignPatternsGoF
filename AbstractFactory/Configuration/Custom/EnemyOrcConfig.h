@@ -3,9 +3,9 @@
 #include "../../Enemy/Orc/OrcWarrior.h"
 #include "../../Enemy/Orc/OrcArcher.h"
 
-class MyOrcConfig : public IConfiguration {
+class EnemyOrcConfig : public IConfiguration {
 public:
-	MyOrcConfig() {
+	EnemyOrcConfig() {
 		Add<OrcWarrior>();
 		Add<OrcArcher>();
 	}

@@ -127,29 +127,52 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Configuration\Custom\MyGoblinConfig.h" />
-    <ClInclude Include="Configuration\Custom\MyOrcConfig.h" />
+    <ClInclude Include="Configuration\Custom\EnemyGoblinConfig.h" />
+    <ClInclude Include="Configuration\Custom\EnemyOrcConfig.h" />
+    <ClInclude Include="Configuration\Custom\ItemGoblinConfig.h" />
+    <ClInclude Include="Configuration\Custom\ItemOrcConfig.h" />
     <ClInclude Include="Configuration\IConfiguration.h" />
     <ClInclude Include="Configuration\IObject.h" />
     <ClInclude Include="Enemy\Goblin\GoblinMage.h" />
     <ClInclude Include="Enemy\Goblin\GoblinAssasin.h" />
     <ClInclude Include="Enemy\Orc\OrcArcher.h" />
     <ClInclude Include="Enemy\Orc\OrcWarrior.h" />
-    <ClInclude Include="Factory\AbstractFactorycpp.h" />
+    <ClInclude Include="Example\Config\FruitConfig.h" />
+    <ClInclude Include="Example\Factory\FruitFactory.h" />
+    <ClInclude Include="Example\Fruit\Apple.h" />
+    <ClInclude Include="Example\Fruit\IFruit.h" />
+    <ClInclude Include="Example\Fruit\Orange.h" />
+    <ClInclude Include="Factory\AbstractFactory.h" />
     <ClInclude Include="Factory\EnemyFactory.h" />
     <ClInclude Include="Factory\IFactory.h" />
+    <ClInclude Include="Factory\ItemFactory.h" />
     <ClInclude Include="Helpers\GetClassName.h" />
     <ClInclude Include="Enemy\IEnemy.h" />
+    <ClInclude Include="Item\Goblin\GoblinDagger.h" />
+    <ClInclude Include="Item\Goblin\GoblinStaff.h" />
+    <ClInclude Include="Item\IItem.h" />
+    <ClInclude Include="Item\Orc\OrcBow.h" />
+    <ClInclude Include="Item\Orc\OrcSword.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Enemy\Goblin\GoblinMage.cpp" />
     <ClCompile Include="Enemy\Goblin\GoblinAssasin.cpp" />
     <ClCompile Include="Enemy\Orc\OrcArcher.cpp" />
     <ClCompile Include="Enemy\Orc\OrcWarrior.cpp" />
-    <ClCompile Include="Factory\AbstractFactorycpp.cpp" />
+    <ClCompile Include="Example\Factory\FruitFactory.cpp" />
+    <ClCompile Include="Example\Fruit\Apple.cpp" />
+    <ClCompile Include="Example\Fruit\IFruit.cpp" />
+    <ClCompile Include="Example\Fruit\Orange.cpp" />
+    <ClCompile Include="Factory\AbstractFactory.cpp" />
     <ClCompile Include="Factory\EnemyFactory.cpp" />
     <ClCompile Include="Factory\IFactory.cpp" />
     <ClCompile Include="Enemy\IEnemy.cpp" />
+    <ClCompile Include="Factory\ItemFactory.cpp" />
+    <ClCompile Include="Item\Goblin\GoblinDagger.cpp" />
+    <ClCompile Include="Item\Goblin\GoblinStaff.cpp" />
+    <ClCompile Include="Item\IItem.cpp" />
+    <ClCompile Include="Item\Orc\OrcBow.cpp" />
+    <ClCompile Include="Item\Orc\OrcSword.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
