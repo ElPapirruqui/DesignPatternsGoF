@@ -1,11 +1,12 @@
 #include "../Configuration/IConfiguration.h"
 #include "EnemyFactory.h"
+#include "../Enemy/IEnemy.h"
 
-EnemyFactory::EnemyFactory(IConfiguration* NewConfig):Configuration(NewConfig){}
+template<class T>
+EnemyFactory<T>::EnemyFactory(IConfiguration* NewConfig):IFactory<T>(NewConfig) {}
 
-EnemyFactory::~EnemyFactory() {}
-
-IEnemy* EnemyFactory::CreateEnemy(string ClassName) {
-	EnemyMap& ConfigMap = Configuration->GetMap();
-	return ConfigMap[ClassName]();
+template<class T>
+T* EnemyFactory<T>::Create(string ObjectType) {
+	T* NewEnemy = IFactory::Create<T>(ObjectType);
+	return NewEnemy;
 }

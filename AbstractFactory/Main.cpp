@@ -1,20 +1,32 @@
-#include<iostream>
-#include "Configuration/Custom/MyEnemyConfig.h"
+#include "Configuration/Custom/MyOrcConfig.h"
+#include "Configuration/Custom/MyGoblinConfig.h"
 #include "Factory/EnemyFactory.h"
+#include<iostream>
 
 using namespace std;
 
 int main() {
-	MyEnemyConfig* config = new MyEnemyConfig();
-	EnemyFactory* enemyFactory = new EnemyFactory(config);
+	MyOrcConfig* OrcConfig = new MyOrcConfig();
+	auto EnemyFactory = new IFactory<IEnemy>(OrcConfig);
 
-	IEnemy* enemy1 = enemyFactory->CreateEnemy("EnemyMelee");
-	string message1 = enemy1->Welcome();
-	cout << message1 << endl;
+	IEnemy* Melee = EnemyFactory->Create("EnemyMelee");
+	string MeleeMessage = Melee->Welcome();
+	cout << MeleeMessage << endl;
 
-	IEnemy* enemy2 = enemyFactory->CreateEnemy("EnemyRange");
-	string message2 = enemy2->Welcome();
-	cout << message2 << endl;
+	IEnemy* Range = EnemyFactory->Create("EnemyRange");
+	string RangeMessage = Range->Welcome();
+	cout << RangeMessage << endl;
+
+	MyGoblinConfig* GoblinConfig = new MyGoblinConfig();
+	EnemyFactory = new IFactory<IEnemy>(GoblinConfig);
+
+	Melee = EnemyFactory->Create("EnemyMelee");
+	MeleeMessage = Melee->Welcome();
+	cout << MeleeMessage << endl;
+
+	Range = EnemyFactory->Create("EnemyRange");
+	RangeMessage = Range->Welcome();
+	cout << RangeMessage << endl;
 
 	return 0;
 }

@@ -127,20 +127,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="Configuration\Custom\MyEnemyConfig.h" />
+    <ClInclude Include="Configuration\Custom\MyGoblinConfig.h" />
+    <ClInclude Include="Configuration\Custom\MyOrcConfig.h" />
     <ClInclude Include="Configuration\IConfiguration.h" />
-    <ClInclude Include="EnemyMelee.h" />
-    <ClInclude Include="EnemyRange.h" />
+    <ClInclude Include="Configuration\IObject.h" />
+    <ClInclude Include="Enemy\Goblin\GoblinMage.h" />
+    <ClInclude Include="Enemy\Goblin\GoblinAssasin.h" />
+    <ClInclude Include="Enemy\Orc\OrcArcher.h" />
+    <ClInclude Include="Enemy\Orc\OrcWarrior.h" />
+    <ClInclude Include="Factory\AbstractFactorycpp.h" />
     <ClInclude Include="Factory\EnemyFactory.h" />
     <ClInclude Include="Factory\IFactory.h" />
     <ClInclude Include="Helpers\GetClassName.h" />
-    <ClInclude Include="IEnemy.h" />
+    <ClInclude Include="Enemy\IEnemy.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="EnemyMelee.cpp" />
-    <ClCompile Include="EnemyRange.cpp" />
+    <ClCompile Include="Enemy\Goblin\GoblinMage.cpp" />
+    <ClCompile Include="Enemy\Goblin\GoblinAssasin.cpp" />
+    <ClCompile Include="Enemy\Orc\OrcArcher.cpp" />
+    <ClCompile Include="Enemy\Orc\OrcWarrior.cpp" />
+    <ClCompile Include="Factory\AbstractFactorycpp.cpp" />
     <ClCompile Include="Factory\EnemyFactory.cpp" />
-    <ClCompile Include="IEnemy.cpp" />
+    <ClCompile Include="Factory\IFactory.cpp" />
+    <ClCompile Include="Enemy\IEnemy.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

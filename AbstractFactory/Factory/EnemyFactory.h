@@ -1,14 +1,9 @@
 #pragma once
 #include "IFactory.h"
-#include<vector>
 
-using namespace std;
-
-class EnemyFactory : public IFactory {
+template<class T>
+class EnemyFactory : public IFactory<T> {
 public:
-	EnemyFactory(IConfiguration* NewConfig);
-	~EnemyFactory();
-	IEnemy* CreateEnemy(string ClassName);
-private:
-	IConfiguration* Configuration;
+	EnemyFactory(class IConfiguration* NewConfig);
+	T* Create(string ObjectType) override;
 };
