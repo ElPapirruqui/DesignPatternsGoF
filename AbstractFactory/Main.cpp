@@ -6,27 +6,28 @@
 using namespace std;
 
 int main() {
-	MyOrcConfig* OrcConfig = new MyOrcConfig();
-	auto EnemyFactory = new IFactory<IEnemy>(OrcConfig);
+	IConfiguration* Config;
+	EnemyFactory* Factory;
+	IEnemy* Melee;
+	IEnemy* Range;
 
-	IEnemy* Melee = EnemyFactory->Create("EnemyMelee");
-	string MeleeMessage = Melee->Welcome();
-	cout << MeleeMessage << endl;
+	Config = new MyOrcConfig();
+	Factory = new EnemyFactory(Config);
 
-	IEnemy* Range = EnemyFactory->Create("EnemyRange");
-	string RangeMessage = Range->Welcome();
-	cout << RangeMessage << endl;
+	Melee = Factory->Create("EnemyMelee");
+	cout << Melee->Welcome() << endl;
 
-	MyGoblinConfig* GoblinConfig = new MyGoblinConfig();
-	EnemyFactory = new IFactory<IEnemy>(GoblinConfig);
+	Range = Factory->Create("EnemyRange");
+	cout << Range->Welcome() << endl;
 
-	Melee = EnemyFactory->Create("EnemyMelee");
-	MeleeMessage = Melee->Welcome();
-	cout << MeleeMessage << endl;
+	Config = new MyGoblinConfig();
+	Factory = new EnemyFactory(Config);
 
-	Range = EnemyFactory->Create("EnemyRange");
-	RangeMessage = Range->Welcome();
-	cout << RangeMessage << endl;
+	Melee = Factory->Create("EnemyMelee");
+	cout << Melee->Welcome() << endl;
+
+	Range = Factory->Create("EnemyRange");
+	cout << Range->Welcome() << endl;
 
 	return 0;
 }

@@ -1,9 +1,10 @@
 #pragma once
 #include "IFactory.h"
 
-template<class T>
-class EnemyFactory : public IFactory<T> {
+class IEnemy;
+
+class EnemyFactory : public IFactory<IEnemy> {
 public:
 	EnemyFactory(class IConfiguration* NewConfig);
-	T* Create(string ObjectType) override;
+	class IEnemy* Create(string ObjectType) override;
 };

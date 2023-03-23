@@ -20,7 +20,6 @@ protected:
 	template <class T>
 	void Add(){
 		string TypeName = T::Type;
-		//string TypeName = GetClassName<T>();
 		MyMap[TypeName] = Instantiate<T>;
 	}
 public:

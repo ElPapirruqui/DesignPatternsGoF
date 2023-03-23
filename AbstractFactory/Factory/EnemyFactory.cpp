@@ -2,11 +2,9 @@
 #include "EnemyFactory.h"
 #include "../Enemy/IEnemy.h"
 
-template<class T>
-EnemyFactory<T>::EnemyFactory(IConfiguration* NewConfig):IFactory<T>(NewConfig) {}
+EnemyFactory::EnemyFactory(IConfiguration* NewConfig) :IFactory<IEnemy>(NewConfig) {}
 
-template<class T>
-T* EnemyFactory<T>::Create(string ObjectType) {
-	T* NewEnemy = IFactory::Create<T>(ObjectType);
+IEnemy* EnemyFactory::Create(string ObjectType) {
+	IEnemy* NewEnemy = IFactory::Create(ObjectType);
 	return NewEnemy;
 }

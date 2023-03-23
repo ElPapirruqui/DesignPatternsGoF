@@ -5,5 +5,5 @@ class IEnemy : public IObject {
 public:
 	IEnemy();
 	virtual ~IEnemy();
-	virtual string Welcome();
+	virtual string Welcome() = 0;
 };
