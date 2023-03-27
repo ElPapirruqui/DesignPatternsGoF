@@ -1,5 +1,7 @@
 #include "WorldContext.h"
 
+WorldContext* WorldContext::World = nullptr;
+
 WorldContext::WorldContext(){}
 
 WorldContext::~WorldContext() {

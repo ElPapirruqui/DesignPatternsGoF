@@ -1,10 +1,10 @@
 #include "PrototypeRegistry.h"
 
-void PrototypeRegistry::Add(EEnemyType Type, IClonable<IEntity>* NewEntity) {
+void PrototypeRegistry::Add(EEnemyType Type, Entity* NewEntity) {
 	Prototypes[Type] = NewEntity;
-	IClonable<IEntity>* Get(EEnemyType Type);
+	Entity* Get(EEnemyType Type);
 }
 
-IClonable<IEntity>* PrototypeRegistry::Create(EEnemyType Type) {
+Entity* PrototypeRegistry::Create(EEnemyType Type) {
 	return Prototypes[Type]->Clone();
 }

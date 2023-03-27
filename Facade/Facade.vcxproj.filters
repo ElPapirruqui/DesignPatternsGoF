@@ -18,30 +18,48 @@
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Enemy\IEnemy.cpp">
+    <ClCompile Include="Entity\Player\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Prototype\PrototypeRegistry.cpp">
+    <ClCompile Include="Senses\SenseFacade.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Senses\IVision.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="World\World.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Helpers\Random.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Prototype\IClonable.h">
+    <ClInclude Include="Entity\Player\Player.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Enemy\IEnemy.h">
+    <ClInclude Include="Entity\Entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Prototype\PrototypeRegistry.h">
+    <ClInclude Include="Entity\Enemy\Enemy.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Prototype\IEntity.h">
+    <ClInclude Include="Senses\IVision.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RegistryEnums\EEnemy.h">
+    <ClInclude Include="Senses\IHear.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="RegistryEnums\EWeapon.h">
+    <ClInclude Include="Senses\SenseFacade.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity\IMovable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="World\World.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Helpers\Random.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

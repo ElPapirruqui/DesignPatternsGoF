@@ -35,7 +35,7 @@ int main() {
 	cout << MyFactory->CreateItem("ItemMelee")->Welcome() << endl;
 	cout << MyFactory->CreateItem("ItemRange")->Welcome() << endl;
 
-	cout << "==============EXAMPLE FRUIT===============" << endl;
+	cout << "==============EXAMPLE SIMPLE FACTORY FRUIT===============" << endl;
 	auto config = new FruitConfig();
 	auto factory = new FruitFactory(config);
 	cout << factory->Create("Apple")->Welcome() << endl;

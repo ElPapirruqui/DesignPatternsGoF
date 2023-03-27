@@ -7,13 +7,13 @@
 using namespace std;
 
 //Defining type for the object map type
-typedef map<EEnemyType, IClonable<IEntity>*> ProtoypeMap;
+typedef map<EEnemyType, Entity*> ProtoypeMap;
 
 class PrototypeRegistry {
 public:
 	PrototypeRegistry() = default;
-	void Add(EEnemyType Type, IClonable<IEntity>* NewEntity);
-	IClonable<IEntity>* Create(EEnemyType Type);
+	void Add(EEnemyType Type, Entity* NewEntity);
+	Entity* Create(EEnemyType Type);
 private:
 	ProtoypeMap Prototypes;
 };

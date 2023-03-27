@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{b1870e1c-d35a-4ae0-86f0-8a525095802b}</ProjectGuid>
-    <RootNamespace>Prototype</RootNamespace>
+    <ProjectGuid>{47b71b29-dcf5-43d3-b1de-dcd1a644a7c4}</ProjectGuid>
+    <RootNamespace>Facade</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -127,17 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Entity\Player\Player.cpp" />
+    <ClCompile Include="Helpers\Random.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="Enemy\IEnemy.cpp" />
-    <ClCompile Include="Prototype\PrototypeRegistry.cpp" />
+    <ClCompile Include="Senses\IVision.cpp" />
+    <ClCompile Include="Senses\SenseFacade.cpp" />
+    <ClCompile Include="World\World.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RegistryEnums\EEnemy.h" />
-    <ClInclude Include="Prototype\IClonable.h" />
-    <ClInclude Include="Enemy\IEnemy.h" />
-    <ClInclude Include="Prototype\IEntity.h" />
-    <ClInclude Include="Prototype\PrototypeRegistry.h" />
-    <ClInclude Include="RegistryEnums\EWeapon.h" />
+    <ClInclude Include="Entity\Enemy\Enemy.h" />
+    <ClInclude Include="Entity\Entity.h" />
+    <ClInclude Include="Entity\IMovable.h" />
+    <ClInclude Include="Entity\Player\Player.h" />
+    <ClInclude Include="Helpers\Random.h" />
+    <ClInclude Include="Senses\IHear.h" />
+    <ClInclude Include="Senses\IVision.h" />
+    <ClInclude Include="Senses\SenseFacade.h" />
+    <ClInclude Include="World\World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,9 +6,9 @@
 
 using namespace std;
 
-int main() {
+int main() {	
 
-	vector<IEnemy*> Enemies;
+	vector<Entity*> Entities;
 	string Type = "";
 	string Weapon = "";
 
@@ -18,18 +18,18 @@ int main() {
 	Registry->Add(EEnemyType::Mage, new IEnemy(EEnemyType::Mage, EWeaponType::Staff, 10, 40, 0));
 	Registry->Add(EEnemyType::Rogue, new IEnemy(EEnemyType::Rogue, EWeaponType::Dagger, 150, 60, 30));
 
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Archer)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Mage)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Warrior)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Archer)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Archer)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Warrior)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Rogue)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Mage)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Mage)));
-	Enemies.push_back(static_cast<IEnemy*>(Registry->Create(EEnemyType::Rogue)));
+	Entities.push_back(Registry->Create(EEnemyType::Mage));
+	Entities.push_back(Registry->Create(EEnemyType::Warrior));
+	Entities.push_back(Registry->Create(EEnemyType::Archer));
+	Entities.push_back(Registry->Create(EEnemyType::Archer));
+	Entities.push_back(Registry->Create(EEnemyType::Warrior));
+	Entities.push_back(Registry->Create(EEnemyType::Rogue));
+	Entities.push_back(Registry->Create(EEnemyType::Mage));
+	Entities.push_back(Registry->Create(EEnemyType::Mage));
+	Entities.push_back(Registry->Create(EEnemyType::Rogue));
 
-	for (IEnemy* Enemy : Enemies) {
+	for (Entity* _Entity : Entities) {
+		IEnemy* Enemy = dynamic_cast<IEnemy*>(_Entity);
 		switch (Enemy->GetType())
 		{
 		case Warrior:
