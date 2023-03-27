@@ -1,6 +1,9 @@
 #pragma once
 
 class IHear {
+public:
+	bool HasHeardSound(int Radius);
 protected:
-	IHear() = default;
+	IHear();
+	int HearingDistance;
 };

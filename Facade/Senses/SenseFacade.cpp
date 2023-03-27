@@ -15,6 +15,15 @@ void SenseFacade::GetEntitiesInSight(vector<IEntity*>& OutEnemiesInSight) {
 	}
 }
 
-void SenseFacade::EmitSound(int Radius) {
-
+int SenseFacade::EmitSound(int Radius) {
+	World* MyWorld = World::GetCurrentWorld();
+	EntityList& Entities = MyWorld->GetAllEntities();
+	int HeardCount = 0;
+	for (IEntity* Entity : Entities) {
+		bool bHasHeard = Entity->HasHeardSound(Radius);
+		if(bHasHeard){
+			HeardCount++;
+		}
+	}
+	return HeardCount;
 }

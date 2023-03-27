@@ -130,6 +130,7 @@
     <ClCompile Include="Entity\Player\Player.cpp" />
     <ClCompile Include="Helpers\Random.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Senses\IHear.cpp" />
     <ClCompile Include="Senses\IVision.cpp" />
     <ClCompile Include="Senses\SenseFacade.cpp" />
     <ClCompile Include="World\World.cpp" />

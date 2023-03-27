@@ -5,9 +5,9 @@
 
 class Player : public IEntity {
 public:
-	Player();
+	Player(int NewSoundRadius);
 	void OnFootstep() override;
 	SenseFacade* Senses;
 private:
-	int SoundRadius = 150;
+	int SoundRadius;
 };

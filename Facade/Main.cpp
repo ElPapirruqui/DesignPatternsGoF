@@ -13,13 +13,20 @@ int main() {
 	MyWorld->SetHiddingThreshold(30);
 	MyWorld->PopulateWorld<Enemy>(1, 8);
 
-	Player* MyPlayer = new Player();
+	cout << "Enemies in world: " + to_string(MyWorld->GetAllEntities().size()) << endl;
+	cout << "" << endl;
+
+	Player* MyPlayer = new Player(50);
 
 	vector<IEntity*> EnemiesInSight;
 	MyPlayer->Senses->GetEntitiesInSight(EnemiesInSight);
 
 	cout << "" << endl;
 	cout << "Enemies in sight: " + to_string(EnemiesInSight.size()) << endl;
+	cout << "" << endl;
+
+	MyPlayer->Move(Vector3(1, 1, 1));
+	cout << "" << endl;
 
 	return 0;
 }

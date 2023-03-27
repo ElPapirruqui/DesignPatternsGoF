@@ -9,7 +9,7 @@ class SenseFacade {
 public:
 	SenseFacade(IEntity* NewOwner);
 	void GetEntitiesInSight(vector<IEntity*>& OutEnemiesInSight);
-	void EmitSound(int Radius);
+	int EmitSound(int Radius);
 private:
 	vector<IEntity*> EntitiesInSight;
 	IEntity* Owner;
