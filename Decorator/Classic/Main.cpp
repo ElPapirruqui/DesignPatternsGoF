@@ -1,12 +1,12 @@
 #include<iostream>
-#include "Enemy/IEnemy.h"
-#include "Enemy/EnemyDecorator.h"
-#include "Enemy/FlamerEnemy.h"
-#include "Enemy/FlyingEnemy.h"
+#include "IEnemy.h"
+#include "EnemyDecorator.h"
+#include "FlamerEnemy.h"
+#include "FlyingEnemy.h"
 
 using namespace std;
 
-int main() {
+int classic_main() {
 
 	IEnemy* Enemy = new IEnemy();
 	cout << "Regular Enemy" << endl;

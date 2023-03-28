@@ -127,19 +127,31 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Enemy\EnemyDecorator.cpp" />
-    <ClCompile Include="Enemy\FlamerEnemy.cpp" />
-    <ClCompile Include="Enemy\FlyingEnemy.cpp" />
-    <ClCompile Include="Enemy\IEnemy.cpp" />
-    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Classic\EnemyDecorator.cpp" />
+    <ClCompile Include="Classic\FlamerEnemy.cpp" />
+    <ClCompile Include="Classic\FlyingEnemy.cpp" />
+    <ClCompile Include="Classic\IEnemy.cpp" />
+    <ClCompile Include="Classic\Main.cpp" />
+    <ClCompile Include="TemplateTest\FlamerEnemy.cpp" />
+    <ClCompile Include="TemplateTest\FlyingEnemy.cpp" />
+    <ClCompile Include="TemplateTest\IDecorator.cpp" />
+    <ClCompile Include="TemplateTest\IEnemy.cpp" />
+    <ClCompile Include="TemplateTest\Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Enemy\IEnemy.h" />
-    <ClInclude Include="Enemy\EnemyDecorator.h" />
-    <ClInclude Include="Enemy\FlamerEnemy.h" />
-    <ClInclude Include="Enemy\FlyingEnemy.h" />
-    <ClInclude Include="Enemy\IFlamer.h" />
-    <ClInclude Include="Enemy\IFly.h" />
+    <ClInclude Include="Classic\IEnemy.h" />
+    <ClInclude Include="Classic\EnemyDecorator.h" />
+    <ClInclude Include="Classic\FlamerEnemy.h" />
+    <ClInclude Include="Classic\FlyingEnemy.h" />
+    <ClInclude Include="Classic\IFlamer.h" />
+    <ClInclude Include="Classic\IFly.h" />
+    <ClInclude Include="TemplateTest\EnemyDecorator.h" />
+    <ClInclude Include="TemplateTest\FlamerEnemy.h" />
+    <ClInclude Include="TemplateTest\FlyingEnemy.h" />
+    <ClInclude Include="TemplateTest\IDecorator.h" />
+    <ClInclude Include="TemplateTest\IEnemy.h" />
+    <ClInclude Include="TemplateTest\IFlamer.h" />
+    <ClInclude Include="TemplateTest\IFly.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
