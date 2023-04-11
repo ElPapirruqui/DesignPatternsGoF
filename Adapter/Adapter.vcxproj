@@ -127,10 +127,21 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Adapter\SteamLobbyAdapter.cpp" />
+    <ClCompile Include="Adapter\SteamLobbyBrowserAdapter.cpp" />
+    <ClCompile Include="Downloaded\SteamLobby.cpp" />
+    <ClCompile Include="Downloaded\SteamLobbyBrowser.cpp" />
+    <ClCompile Include="Local\Lobby.cpp" />
+    <ClCompile Include="Local\LobbyBrowser.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Adapter\SteamLobbyAdapter.h" />
+    <ClInclude Include="Adapter\SteamLobbyBrowserAdapter.h" />
+    <ClInclude Include="Downloaded\SteamLobby.h" />
+    <ClInclude Include="Downloaded\SteamLobbyBrowser.h" />
+    <ClInclude Include="Local\Lobby.h" />
+    <ClInclude Include="Local\LobbyBrowser.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
