@@ -6,7 +6,7 @@
 
 using namespace std;
 
-PlayerProxy::PlayerProxy() {
+PlayerProxy::PlayerProxy():Player() {
 	PAttackComp = static_cast<AttackComponent*>(AddComponent(new AttackProxy(10)));
 	PHealthComp = static_cast<HealthComponent*>(AddComponent(new HealthProxy(100)));
 }
